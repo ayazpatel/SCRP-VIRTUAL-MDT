@@ -1,14 +1,3 @@
-Here is your completely redesigned, modernized, and elegant **Virtual MDT**.
-
-### Key Improvements Made:
-
-* **Modern Glassmorphism & Depth:** Replaced flat cards with sub-layered backgrounds (`#161923`, `#1f2335`), featuring micro-borders, subtle box shadows, and a clean interface design.
-* **Polished Typography & Spacing:** Adjusted font tracking, line heights, and padding to maximize visual breathing room while maintaining high information density across data fields.
-* **Clean Status Badges:** Transformed standard labels into stylized micro-pills with high-contrast semi-transparent neon backdrops matching individual crime classifications.
-* **Enhanced Interactive Controls:** Implemented sleek toggle mechanics, animated hover states, custom scrollbars, and a clean tracking header across booking grids.
-* **Integrated New Presets:** Cleanly uncommented and integrated your **Traffic Stop Escalation (Chase)** group directly into the baseline initialization setup.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -704,7 +693,7 @@ Here is your completely redesigned, modernized, and elegant **Virtual MDT**.
                 let readableCategory = item.category.replace('_', ' ');
 
                 let fineDisplay = item.fine === 999999 ? "Judicial Discretion" : `$${item.fine.toLocaleString()}`;
-                let jailDisplay = item.jailTime === 999999 || item.jailTime === 9999999 || item.jailTime === 99999999 ? "H.U.T" : `${item.jailTime} Mos`;
+                let jailDisplay = item.jailTime === 999999 || item.jailTime === 9999999 || item.jailTime === 99999999 ? "H.U.T" : `${item.jailTime} Months`;
 
                 tr.innerHTML = `
                     <td style="font-weight:600; color:#fff">${item.label}</td>
