@@ -189,7 +189,7 @@
         .badge-misdemeanor { background: #d97706; color: #fef3c7; }
         .badge-felony { background: #dc2626; color: #fef2f2; }
         .badge-hut { background: #7c3aed; color: #f5f3ff; }
-        .badge-internal { background: #db2777; color: #fdf2f8; }
+        .badge-internal-affairs { background: #db2777; color: #fdf2f8; }
 
         /* Animation States for Hamburger Icon Component */
         .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -254,8 +254,7 @@
         <main>
             <div id="charge-sheet" class="tab-content active">
                 <div class="calculator-layout">
-                    <div class="robbery-grid" id="robberyGrid">
-                        </div>
+                    <div class="robbery-grid" id="robberyGrid"></div>
 
                     <div class="basket-panel">
                         <div class="basket-title">Booking Summary</div>
@@ -276,7 +275,7 @@
                     <input type="text" id="searchBox" class="search-box" placeholder="Search code or description..." oninput="filterTable()">
                     <div class="filter-buttons-scroll">
                         <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
-                        <button class="filter-btn" onclick="filterCategory('traffic_violations', this)">Traffic</button>
+                        <button class="filter-btn" onclick="filterCategory('traffic', this)">Traffic</button>
                         <button class="filter-btn" onclick="filterCategory('infraction', this)">Infraction</button>
                         <button class="filter-btn" onclick="filterCategory('misdemeanor', this)">Misdemeanor</button>
                         <button class="filter-btn" onclick="filterCategory('felony', this)">Felony</button>
@@ -296,8 +295,7 @@
                                 <th style="width: 10%">Jail Time</th>
                             </tr>
                         </thead>
-                        <tbody id="penalCodesTableBody">
-                            </tbody>
+                        <tbody id="penalCodesTableBody"></tbody>
                     </table>
                 </div>
             </div>
@@ -416,56 +414,56 @@
                 "description": "Drives a car without a valid license.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "failure_to_obey_traffic_control_devices": {
                 "label": "Failure to Obey Traffic Control Devices",
                 "description": "Does not obey a sign or signal defined as regulatory.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "failure_to_use_turn_signal": {
                 "label": "Failure to use Turn Signal",
                 "description": "Does not use a turn signal when necessary.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "third_degree_speeding": {
                 "label": "Third Degree Speeding",
                 "description": "Speeds in excess of 35 mph to 55 mph.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "second_degree_speeding": {
                 "label": "Second Degree Speeding",
                 "description": "Speeds in excess of 56 mph to 85 mph.",
                 "fine": 700,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "first_degree_speeding": {
                 "label": "First Degree Speeding",
                 "description": "Speeds in excess of more than 86 mph. Driver's License may be subject to removal.",
                 "fine": 1000,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "unauthorized_parking": {
                 "label": "Unauthorized Parking",
                 "description": "Parks in a non designated area.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "nonfunctional_vehicle": {
                 "label": "Nonfunctional Vehicle",
                 "description": "Drives a nonfunctional vehicle e.g. smashed windows, illegal window tint (Fully blacked out windows), doors, etc.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "possession_of_fake_license_plate": {
                 "label": "Possession of Fake License Plate",
@@ -493,7 +491,7 @@
                 "description": "Driving an Off-Road vehicle in an unauthorized area or in city premisis without proper permit.",
                 "fine": 800,
                 "jailTime": 0,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "evading": {
                 "label": "Evading",
@@ -598,7 +596,7 @@
                 "description": "Crosses a road without the use of a crosswalk.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "discharge_of_a_hunting_rifle_on_a_public_roadway": {
                 "label": "Discharge of a Hunting Rifle on a Public Roadway",
@@ -675,7 +673,7 @@
                 "description": "Causes mass destruction using explosives, sickness, or extreme violence.",
                 "fine": 0,
                 "jailTime": 999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "criminal_threats": {
                 "label": "Criminal Threats",
@@ -763,35 +761,35 @@
             },
             "accessory_to_manslaughter": {
                 "label": "Accessory to Manslaughter",
-                "description": "Aids and or abets a person in the attempt to unlawfully kill another human without justification or valid or valid excuse, especially the unlawful killing of another human with malice aforethought premeditation.",
+                "description": "Aids and or abets a person in the attempt to unlawfully kill another human without justification or valid excuse.",
                 "fine": 0,
                 "jailTime": 9999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "attempted_manslaughter": {
                 "label": "Attempted Manslaughter",
-                "description": "The attempt to unlawfully kill that does not involve malice aforethought intent to seriously harm or kill, or extreme, reckless disregard for life.",
+                "description": "The attempt to unlawfully kill that does not involve malice aforethought intent to seriously harm or kill.",
                 "fine": 0,
                 "jailTime": 99999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "accessory_to_attempted_murder": {
                 "label": "Accessory to Attempted Murder",
-                "description": "Aids and or abets a person in the attempt to unlawfully kill another human without justification or valid or valid excuse, especially the unlawful killing of another human with malice aforethought premeditation.",
+                "description": "Aids and or abets a person in the attempt to unlawfully kill another human without justification or valid excuse.",
                 "fine": 3000,
                 "jailTime": 2,
                 "category": "felony"
             },
             "attempted_murder": {
                 "label": "Attempted Murder",
-                "description": "The attempt to unlawfully kill another human without justification or valid excuse, especially the unlawful killing of another human with malice aforethought premeditation.",
+                "description": "The attempt to unlawfully kill another human without justification or valid excuse.",
                 "fine": 3000,
                 "jailTime": 2,
                 "category": "felony"
             },
             "accessory_to_attempted_murder_of_a_government_employee": {
                 "label": "Accessory to Attempted Murder of a Government Employee",
-                "description": "Aids and or abets a person in the attempt to murder a Government Employee if a Government Employee is downed in a scene.",
+                "description": "Aids and or abets a person in the attempt to murder a Government Employee.",
                 "fine": 5000,
                 "jailTime": 2,
                 "category": "felony"
@@ -805,10 +803,10 @@
             },
             "manslaughter": {
                 "label": "Manslaughter",
-                "description": "The act of unlawfully killing that does not involve malicious intent to seriously harm or kill, or extreme, reckless disregard for life.",
+                "description": "The act of unlawfully killing that does not involve malicious intent to seriously harm or kill.",
                 "fine": 0,
                 "jailTime": 999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "murder": {
                 "label": "Murder",
@@ -822,14 +820,14 @@
                 "description": "The intentional act that leads to the death of a Government Employee.",
                 "fine": 0,
                 "jailTime": 999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "loitering": {
                 "label": "Loitering",
                 "description": "Intentionally standing or waiting idly without apparent purpose.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "disobeying_a_lawful_command": {
                 "label": "Disobeying a Lawful Command",
@@ -843,21 +841,21 @@
                 "description": "Disrespectful behaviour against a Peace Officer.",
                 "fine": 2000,
                 "jailTime": 2,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "disorderly_conduct": {
                 "label": "Disorderly Conduct",
-                "description": "Unlawfully fighting, or challenging another person to fight, in a public place. Disturbing another person by loud and unreasonable noise; if this is done willfully and maliciously. Using offensive words in a public place, if the words are likely to provoke an immediate violent reaction",
+                "description": "Unlawfully fighting, or challenging another person to fight, in a public place.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "false_reporting": {
                 "label": "False Reporting",
                 "description": "Reports a false or non existent crime.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "failure_to_provide_identification": {
                 "label": "Failure to Provide Identification",
@@ -875,28 +873,28 @@
             },
             "unlawful_assembly": {
                 "label": "Unlawful Assembly",
-                "description": "Participates in an event/assembly which results in violent conduct or creates a risk of causing public harm with a group of at least four people.",
+                "description": "Participates in an event/assembly which results in violent conduct with at least four people.",
                 "fine": 4000,
                 "jailTime": 60,
                 "category": "misdemeanor"
             },
             "harassment": {
                 "label": "Harassment",
-                "description": "Intimidates or pressures another person aggressively with unwelcome words, deeds, actions, or gestures.",
+                "description": "Intimidates or pressures another person aggressively with unwelcome actions.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
             },
             "obstruction_of_justice": {
                 "label": "Obstruction of Justice",
-                "description": "Willfully tampers with the discovery, apprehension, conviction or punishment of a crime after a crime has been committed or charged.",
+                "description": "Willfully tampers with the discovery, apprehension, conviction or punishment of a crime.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
             },
             "inciting_a_riot": {
                 "label": "Inciting a Riot",
-                "description": "Organizes an event/assembly which results in violent conduct or creates a risk of causing public harm with a group of at least four people.",
+                "description": "Organizes an event/assembly which results in violent conduct with at least four people.",
                 "fine": 2000,
                 "jailTime": 3,
                 "category": "felony"
@@ -917,24 +915,24 @@
             },
             "stalking": {
                 "label": "Stalking",
-                "description": "The following, harassing, threatening of another person, to the point where an individual fears for his/her safety.",
+                "description": "The following, harassing, threatening of another person.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "evidence_tampering": {
                 "label": "Tampering with Evidence",
-                "description": "Destroy, Conceal or remove a piece of evidence with the purpose of hiding the truth or make an item unavailable for proceeding investigation.",
+                "description": "Destroy, Conceal or remove a piece of evidence with the purpose of hiding the truth.",
                 "fine": 999999,
                 "jailTime": 999999,
-                "category": "Internal Affairs"
+                "category": "internal_affairs"
             },
-            "internal Affairs": {
+            "government_corruption": {
                 "label": "Government Corruption",
                 "description": "The use of powers by government officials or their network contacts for illegitimate private/personal gain.",
                 "fine": 999999,
                 "jailTime": 999999,
-                "category": "Internal Affairs"
+                "category": "internal_affairs"
             },
             "conspiracy": {
                 "label": "Conspiracy",
@@ -945,49 +943,49 @@
             },
             "anti-mask_law": {
                 "label": "Anti-Mask Law",
-                "description": "Willfully wears a mask and refuses to remove it in a public institution (Police stations, hospitals, courthouses) or in hinderance of law enforcements duties.",
+                "description": "Willfully wears a mask and refuses to remove it in a public institution.",
                 "fine": 500,
                 "jailTime": 1,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "operating_without_a_permit": {
                 "label": "Operating without a permit",
                 "description": "The illegal act of operation of an activity that requires a valid permit.",
                 "fine": 500,
                 "jailTime": 0,
-                "category": "Infraction"
+                "category": "infraction"
             },
             "possession_of_stolen_property": {
                 "label": "Possession of Stolen Property",
-                "description": "Possesses any physical property that is reported stolen. This includes but is not limited to; billstraps, gold bars, jewelry and any items obtained from a bank.",
+                "description": "Possesses any physical property that is reported stolen.",
                 "fine": 1000,
                 "jailTime": 1,
                 "category": "misdemeanor"
             },
             "sale_/_purchase_of_stolen_property": {
                 "label": "Sale / Purchase of Stolen Property",
-                "description": "The selling/purchasing of any stolen goods. This includes but is not limited to; billstraps, gold bars, jewelry and any items obtained from a bank.",
+                "description": "The selling/purchasing of any stolen goods.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
             },
             "bribery": {
                 "label": "Bribery",
-                "description": "Confers, or agrees to confer, any benefit upon a public servant upon an agreement or understanding that such public servant's vote, opinion, judgment, action, decision or exercise of discretion as a public servant will thereby be influenced.",
+                "description": "Confers, or agrees to confer, any benefit upon a public servant to influence them.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
             },
             "possession_of_items_used_in_the_commission_of_a_crime": {
                 "label": "Possession of Items Used In The Commission Of A Crime",
-                "description": "Possession of any items used in the commission of a felony, misdemeanor or infraction. This includes hacking devices, crowbars or drills used in a crime.",
+                "description": "Possession of any items used in the commission of a felony, misdemeanor or infraction.",
                 "fine": 1000,
                 "jailTime": 1,
                 "category": "misdemeanor"
             },
             "possession_of_government_issued_equipment/property": {
                 "label": "Possession of government issued equipment/property",
-                "description": "Possession of any item that belongs to the government without the consent. This includes PD and EMS Equipments.",
+                "description": "Possession of any item that belongs to the government without the consent.",
                 "fine": 3000,
                 "jailTime": 35,
                 "category": "felony"
@@ -997,14 +995,14 @@
                 "description": "Failure to Appear in Court when summoned.",
                 "fine": 999999,
                 "jailTime": 999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "violating_a_court_order": {
                 "label": "Violating a Court Order",
                 "description": "Willful disobedience of the terms written in a court order.",
                 "fine": 999999,
                 "jailTime": 999999,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "escaping_custody": {
                 "label": "Escaping Custody",
@@ -1025,7 +1023,7 @@
                 "description": "Breaks into government buildings designated for detainment or imprisonment with intent to break a prisoner out.",
                 "fine": 5000,
                 "jailTime": 80,
-                "category": "H.U.T"
+                "category": "hut"
             },
             "perjury": {
                 "label": "Perjury",
@@ -1050,14 +1048,14 @@
             },
             "contempt_of_court": {
                 "label": "Contempt of Court",
-                "description": "The act of being disobedient to or discourteous towards a court of law and its officers in the form of behavior that opposes or defies the authority, justice and dignity of the court. Time/Fine is Judge Discretion.",
+                "description": "The act of being disobedient to or discourteous towards a court of law.",
                 "fine": 999999,
                 "jailTime": 999999,
                 "category": "felony"
             },
             "trespassing": {
                 "label": "Trespassing",
-                "description": "Enters knowingly or remains unlawfully in or upon government premises or private property. (Police holding, military installations, Braddock Farm, Power Station etc..)",
+                "description": "Enters knowingly or remains unlawfully in or upon government premises or private property.",
                 "fine": 1000,
                 "jailTime": 1,
                 "category": "misdemeanor"
@@ -1078,28 +1076,28 @@
             },
             "impersonating": {
                 "label": "Impersonating",
-                "description": "Impersonates another person that could make them civilly or criminally liable, signing under a false name or providing documentation of another person.",
+                "description": "Impersonates another person that could make them civilly or criminally liable.",
                 "fine": 1500,
                 "jailTime": 15,
                 "category": "misdemeanor"
             },
             "forgery": {
                 "label": "Forgery",
-                "description": "Possessing or creating any false documents (Government, corporate or private) including but not limited to ID cards, contracts and license plates.",
+                "description": "Possessing or creating any false documents.",
                 "fine": 2000,
                 "jailTime": 3,
                 "category": "felony"
             },
             "impersonating_a_peace_officer": {
                 "label": "Impersonating a Peace Officer",
-                "description": "Acting or introducing themselves as a Police Officer to others. Attempting to perform Peace Officer duties upon others.",
+                "description": "Acting or introducing themselves as a Police Officer to others.",
                 "fine": 5000,
                 "jailTime": 50,
                 "category": "felony"
             },
             "impersonating_a_lawyer/judge": {
                 "label": "Impersonating a Lawyer/Judge",
-                "description": "Acting as a Lawyer/Judge or introducing themselves to others as a Lawyer/Judge and attempting to perform law related duties.",
+                "description": "Acting as a Lawyer/Judge or introducing themselves to others as a Lawyer/Judge.",
                 "fine": 999999,
                 "jailTime": 999999,
                 "category": "felony"
@@ -1120,14 +1118,14 @@
             },
             "antitrust": {
                 "label": "Antitrust",
-                "description": "Taking actions that engage in the creation of a monopoly are deemed criminal. This includes predatory acts to gain or hold monopoly power, price fixing limited markets (Car Sales, Store Shops and Mechanic Hubs) or malicious sabotage of a competitors stock. All individuals that manage, work for or own shares (majority or minority) in, a business or participates with an individual that engages in these tactics are liable if found to have not reported these actions if they we were aware they were being undertaken.",
+                "description": "Taking actions that engage in the creation of a monopoly are deemed criminal.",
                 "fine": 999999,
                 "jailTime": 999999,
                 "category": "felony"
             },
             "public_intoxication": {
                 "label": "Public Intoxication",
-                "description": "Being present in a public space while under influence of drugs or alcohol. Under the influence of alcohol means in a state where you do not have control over yourself or present a threat to others.",
+                "description": "Being present in a public space while under influence of drugs or alcohol.",
                 "fine": 500,
                 "jailTime": 0,
                 "category": "infraction"
@@ -1176,7 +1174,7 @@
             },
             "sexual_harassment": {
                 "label": "Sexual Harassment",
-                "description": "Sexual advances, requests for sexual favors, and other verbal or physical conduct of a sexual nature after being requested to stop.",
+                "description": "Sexual advances, requests for sexual favors, and other verbal or physical conduct.",
                 "fine": 2000,
                 "jailTime": 3,
                 "category": "felony"
@@ -1187,20 +1185,6 @@
                 "fine": 500,
                 "jailTime": 1,
                 "category": "misdemeanor"
-            },
-            "life_invader": {
-                "label": "Armed Robbery of a Private Establishment",
-                "description": "Using force or intimidation to rob a privately owned business.",
-                "fine": 6000,
-                "jailTime": 4,
-                "category": "felony"
-            },
-            "illegal_drop": {
-                "label": "Trafficking of Illegal Contraband Delivery",
-                "description": "Receiving, transporting, or handling illegal items at a drop location.",
-                "fine": 2000,
-                "jailTime": 4,
-                "category": "felony"
             },
             "driving_under_the_influence": {
                 "label": "Driving Under the Influence (DUI)",
@@ -1265,13 +1249,6 @@
                 "jailTime": 3,
                 "category": "felony"
             },
-            "atm_robbery": {
-                "label": "ATM Robbery",
-                "description": "Breaking into or robbing an ATM for financial gain.",
-                "fine": 2000,
-                "jailTime": 5,
-                "category": "felony"
-            },
             "trespassing_on_restricted_government_property": {
                 "label": "Trespassing on Restricted Government Property",
                 "description": "Entering or remaining on restricted government property without authorization.",
@@ -1295,21 +1272,21 @@
             },
             "provocation_of_public_disorder": {
                 "label": "Provocation of Public Disorder",
-                "description": "Intentionally provoking, encouraging, or announcing criminal or violent activity in a public setting with the intent to cause panic, disruption, intimidation, or unrest.",
+                "description": "Intentionally provoking criminal or violent activity in a public setting.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
             },
             "joyriding": {
                 "label": "Joyriding",
-                "description": "Operating or taking another person's vehicle without permission and without intent to permanently steal it.",
+                "description": "Operating or taking another person's vehicle without permission.",
                 "fine": 500,
                 "jailTime": 2,
-                "category": "Traffic violations"
+                "category": "traffic"
             },
             "online_harassment": {
                 "label": "Online Harassment",
-                "description": "Using electronic communication or online platforms to repeatedly threaten, intimidate, abuse, or harass another individual.",
+                "description": "Using electronic communication to repeatedly threaten, abuse, or harass another individual.",
                 "fine": 1000,
                 "jailTime": 2,
                 "category": "misdemeanor"
@@ -1334,7 +1311,6 @@
         }
 
         function switchTab(tabId) {
-            // Close collapsible mobile drawer automatically on click
             const sidebar = document.getElementById('sidebarMenu');
             if (sidebar.classList.contains('open')) {
                 toggleSidebar();
@@ -1345,7 +1321,6 @@
             
             document.getElementById(tabId).classList.add('active');
 
-            // Synchronize active status updates across navigation button instances
             document.querySelectorAll(`.tab-btn[onclick="switchTab('${tabId}')"]`).forEach(btn => {
                 btn.classList.add('active');
             });
@@ -1410,7 +1385,7 @@
                 tr.setAttribute('data-name', item.label.toLowerCase());
                 tr.setAttribute('data-desc', item.description.toLowerCase());
 
-                let badgeClass = `badge-${item.category.replace('_', '-')}`;
+                let badgeClass = `badge-${item.category}`;
                 let readableCategory = item.category.replace('_', ' ');
 
                 let fineDisplay = item.fine === 999999 ? "Judicial Discretion" : `$${item.fine.toLocaleString()}`;
